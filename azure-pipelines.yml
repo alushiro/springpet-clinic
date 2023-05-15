@@ -22,8 +22,8 @@ steps:
 #  inputs:
 #    SonarCloud: 'SonarCloud'
 #    organization: 'alushiro'
-#    projectKey: 'alushiro_springpet-clinic'
-#    projectName: 'springpet-clinic'
+#    projectKey: 'alushiro_microservicio-spring-v4'
+#    projectName: 'microservicio-spring-v4'
 #  displayName: 'SonarCloud Prepare'
   
 #- task: Gradle@3
@@ -37,20 +37,20 @@ steps:
 #    sonarQubeGradlePluginVersion: '3.5.0.2730'
 #    spotBugsAnalysis: false
 
-- task: Docker@2
-  inputs:
-    containerRegistry: 'Docker'
-    command: 'login'
+#- task: Docker@2
+#  inputs:
+#    containerRegistry: 'Docker'
+#    command: 'login'
   
-- task: Docker@2
-  inputs:
-    containerRegistry: 'Docker'
-    repository: 'alushiro/spring-clinic'
-    command: 'build'
-    Dockerfile: '**/Dockerfile'
+#- task: Docker@2
+#  inputs:
+#    containerRegistry: 'Docker'
+#    repository: 'alushiro/microservicio-spring-v4'
+#    command: 'build'
+#    Dockerfile: '**/Dockerfile'
 
-- task: Docker@2
-  inputs:
-    containerRegistry: 'Docker'
-    repository: 'alushiro/spring-clinic'
-    command: 'push'
+#- task: Docker@2
+#  inputs:
+#    containerRegistry: 'Docker'
+#    repository: 'alushiro/microservicio-spring-v4'
+#    command: 'push'
